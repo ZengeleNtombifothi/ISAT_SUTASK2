@@ -64,3 +64,61 @@ void demo() {
     cout << "Generated number: " << randomNumber << endl;
     cout << "Binary equivalent: " << decimalToBinary(randomNumber) << endl;
 }
+
+// Main Menu
+int main() {
+    int choice;
+    do {
+        cout << "\n===== Number Conversion Menu =====" << endl;
+        cout << "1. Convert Decimal to Binary" << endl;
+        cout << "2. Convert Binary to Decimal" << endl;
+        cout << "3. Convert Decimal to Hexadecimal" << endl;
+        cout << "4. Convert Hexadecimal to Decimal" << endl;
+        cout << "5. Demo (Random number to Binary)" << endl;
+        cout << "6. Exit" << endl;
+        cout << "Enter your choice: ";
+        cin >> choice;
+
+        switch (choice) {
+            case 1: {
+                int decimal;
+                cout << "Enter a decimal number: ";
+                cin >> decimal;
+                cout << "Binary: " << decimalToBinary(decimal) << endl;
+                break;
+            }
+            case 2: {
+                string binary;
+                cout << "Enter a binary number: ";
+                cin >> binary;
+                cout << "Decimal: " << binaryToDecimal(binary) << endl;
+                break;
+            }
+            case 3: {
+                int decimal;
+                cout << "Enter a decimal number: ";
+                cin >> decimal;
+                cout << "Hexadecimal: " << decimalToHexadecimal(decimal) << endl;
+                break;
+            }
+            case 4: {
+                string hex;
+                cout << "Enter a hexadecimal number: ";
+                cin >> hex;
+                cout << "Decimal: " << hexadecimalToDecimal(hex) << endl;
+                break;
+            }
+            case 5: {
+                demo();
+                break;
+            }
+            case 6:
+                cout << "Exiting program. Goodbye!" << endl;
+                break;
+            default:
+                cout << "Invalid choice! Try again." << endl;
+        }
+    } while (choice != 6);
+
+    return 0;
+}
