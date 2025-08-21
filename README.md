@@ -31,3 +31,15 @@ int binaryToDecimal(string binary) {
     }
     return decimal;
 }
+
+// Function 3: Decimal to Hexadecimal
+string decimalToHexadecimal(int decimal) {
+    if (decimal == 0) return "0";
+    string hex = "";
+    string hexChars = "0123456789ABCDEF";
+    while (decimal > 0) {
+        hex = hexChars[decimal % 16] + hex;
+        decimal /= 16;
+    }
+    return hex;
+}
