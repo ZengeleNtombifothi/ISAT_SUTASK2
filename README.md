@@ -43,3 +43,16 @@ string decimalToHexadecimal(int decimal) {
     }
     return hex;
 }
+
+// Function 4: Hexadecimal to Decimal
+int hexadecimalToDecimal(string hex) {
+    int decimal = 0;
+    for (char digit : hex) {
+        if (isdigit(digit)) {
+            decimal = decimal * 16 + (digit - '0');
+        } else {
+            decimal = decimal * 16 + (toupper(digit) - 'A' + 10);
+        }
+    }
+    return decimal;
+}
