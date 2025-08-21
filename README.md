@@ -56,3 +56,11 @@ int hexadecimalToDecimal(string hex) {
     }
     return decimal;
 }
+
+// Function: Demo (random number between 0 and 99 converted to binary)
+void demo() {
+    srand(time(0)); 
+    int randomNumber = rand() % 100;
+    cout << "Generated number: " << randomNumber << endl;
+    cout << "Binary equivalent: " << decimalToBinary(randomNumber) << endl;
+}
