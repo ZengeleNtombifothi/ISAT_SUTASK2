@@ -12,7 +12,7 @@ string decimalToBinary(int decimal) {
     vector<int> binary;
     int num = decimal;
     while (num > 0) {
-        binary.push_back(num % 2);
+        binary.insert(binary.begin(), num % 2);
         num /= 2;
     }
 
