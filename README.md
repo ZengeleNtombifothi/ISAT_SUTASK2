@@ -1,5 +1,4 @@
 #include <iostream>
-#include <vector>
 #include <string>
 #include <cstdlib>   // for rand()
 #include <ctime>    // for time
@@ -9,7 +8,7 @@ using namespace std;
 string decimalToBinary(int decimal) {
     if (decimal == 0) return "0";
 
-    vector<int> binary;
+    string<int> binary;
     int num = decimal;
     while (num > 0) {
         binary.push_back(num % 2);
