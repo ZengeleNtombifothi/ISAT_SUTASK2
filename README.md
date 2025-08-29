@@ -11,7 +11,7 @@ string decimalToBinary(int decimal) {
     string<int> binary;
     int num = decimal;
     while (num > 0) {
-        binary.push_back(num % 2);
+        binary.insert(binary.end(), num % 2);
         num /= 2;
     }
 
